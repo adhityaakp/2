@@ -35,7 +35,7 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/_1.js"></script>
+        <script src="data/Peta_1.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -131,10 +131,10 @@
             map.setMaxBounds(map.getBounds());
             map.setMinZoom(map.getZoom());
         }
-        map.createPane('pane__0');
-        map.getPane('pane__0').style.zIndex = 400;
-        var layer__0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            pane: 'pane__0',
+        map.createPane('pane_OSMStandard_0');
+        map.getPane('pane_OSMStandard_0').style.zIndex = 400;
+        var layer_OSMStandard_0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OSMStandard_0',
             opacity: 1.0,
             attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
             minZoom: 5,
@@ -142,9 +142,9 @@
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
-        layer__0;
-        map.addLayer(layer__0);
-        function pop__1(feature, layer) {
+        layer_OSMStandard_0;
+        map.addLayer(layer_OSMStandard_0);
+        function pop_Peta_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -219,9 +219,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style__1_0() {
+        function style_Peta_1_0() {
             return {
-                pane: 'pane__1',
+                pane: 'pane_Peta_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -234,20 +234,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane__1');
-        map.getPane('pane__1').style.zIndex = 401;
-        map.getPane('pane__1').style['mix-blend-mode'] = 'normal';
-        var layer__1 = new L.geoJson(json__1, {
+        map.createPane('pane_Peta_1');
+        map.getPane('pane_Peta_1').style.zIndex = 401;
+        map.getPane('pane_Peta_1').style['mix-blend-mode'] = 'normal';
+        var layer_Peta_1 = new L.geoJson(json_Peta_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json__1',
-            layerName: 'layer__1',
-            pane: 'pane__1',
-            onEachFeature: pop__1,
-            style: style__1_0,
+            dataVar: 'json_Peta_1',
+            layerName: 'layer_Peta_1',
+            pane: 'pane_Peta_1',
+            onEachFeature: pop_Peta_1,
+            style: style_Peta_1_0,
         });
-        bounds_group.addLayer(layer__1);
-        map.addLayer(layer__1);
+        bounds_group.addLayer(layer_Peta_1);
+        map.addLayer(layer_Peta_1);
         setBounds();
         </script>        
     </body>
